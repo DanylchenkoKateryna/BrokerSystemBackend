@@ -54,7 +54,8 @@ public class BrokerController {
         }
         if(searchedApartments.size()==0) {
             //newApartment.setImgUrl("/p-1.png");
-            brokerRepository.save(newApartment);
+            add(newApartment);
+            //brokerRepository.save(newApartment);
             return searchedApartments;
         }else{
             brokerRepository.delete(searchedApartments.get(0));
