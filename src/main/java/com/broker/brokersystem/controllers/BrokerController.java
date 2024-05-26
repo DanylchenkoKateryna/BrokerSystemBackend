@@ -53,7 +53,7 @@ public class BrokerController {
             }
         }
         if(searchedApartments.size()==0) {
-            newApartment.setImgUrl("/p-1.png");
+            //newApartment.setImgUrl("/p-1.png");
             brokerRepository.save(newApartment);
             return searchedApartments;
         }else{
