@@ -34,6 +34,7 @@ public class BrokerController {
 
     @PostMapping("/add")
     public String add(@RequestBody Apartment apartment){
+        apartment.setImgUrl("/p-1.png");
         brokerRepository.save(apartment);
         return "New Apartment Added";
     }
@@ -52,6 +53,7 @@ public class BrokerController {
             }
         }
         if(searchedApartments.size()==0) {
+            newApartment.setImgUrl("/p-1.png");
             brokerRepository.save(newApartment);
             return searchedApartments;
         }else{
